@@ -27,11 +27,11 @@
   }
 
   .card {
-    width: 75%;
-    max-width: 270px;
+    width: 85%;
+    max-width: 300px;
     background: white;
     border-radius: 25px;
-    padding: 12px;
+    padding: 18px;
     text-align: center;
     box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     animation: fadeIn 1s ease;
@@ -106,31 +106,40 @@
   }
 
   /* ✅ Special fix for 1612x720 (landscape phones) */
-  @media (max-width: 720px) and (orientation: landscape) {
-    .card {
-      width: 60%;
-      max-width: 200px;
-      padding: 12px;
-    }
-
-    h1 {
-      font-size: 1.2em;
-    }
-
-    .message {
-      font-size: 0.8em;
-    }
-
-    .quote {
-      font-size: 0.7em;
-    }
-
-    button {
-      padding: 10px;
-      font-size: 0.9em;
-    }
+  @media (max-width: 480px) {
+  .card {
+    padding: 14px;
   }
-</style>
+
+  .photo-container {
+    aspect-ratio: 1085 / 1300; /* shorter image */
+  }
+
+  .photo-container img {
+    margin-bottom: 8px;
+  }
+
+  .message {
+    margin: 6px 0;
+    font-size: 0.85em;
+  }
+
+  .icons {
+    margin: 6px 0;
+    font-size: 22px;
+  }
+
+  .quote {
+    margin-bottom: 10px;
+    font-size: 0.7em;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}
+ </style>
 </head>
 
 <body>
