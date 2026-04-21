@@ -129,7 +129,10 @@
     "Every moment with you is a gift I cherish forever."
   </div>
 
-  <button onclick="showSurprise()">Click for a Surprise 🎁</button>
+  <button onclick="celebrate()" 
+      class="mt-6 px-6 py-3 bg-pink-500 text-white rounded-xl shadow hover:bg-pink-600 transition w-full">
+      Click for a Surprise 🎊
+    </button>
 
   <div class="surprise" id="surprise">
     You are my today, my tomorrow, and my forever 💕 I love you honey 💞💓🎀
@@ -138,6 +141,20 @@
 </div>
 
 <script>
+ function celebrate() {
+      document.getElementById('surprise').classList.remove('hidden');
+
+      confetti({
+        particleCount: 120,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+
+      setTimeout(() => {
+        confetti({ particleCount: 80, spread: 120, origin: { x: 0.2 } });
+        confetti({ particleCount: 80, spread: 120, origin: { x: 0.8 } });
+      }, 300);
+    }
   function showSurprise() {
     document.getElementById("surprise").style.display = "block";
   }
