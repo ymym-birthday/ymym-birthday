@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Happy Birthday Honey 💝</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+
+  /* ✅ ONLY your image (no pink overlay) */
+  background: url("background.png") no-repeat center center;
+  background-size: cover;
+}
+
+  .card {
+    width: 90%;
+    max-width: 360px;
+    background: white;
+    border-radius: 25px;
+    padding: 22px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    animation: fadeIn 1s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1 {
+    font-size: 1.5em;
+    color: #ff4f8b;
+    margin-bottom: 12px;
+  }
+
+  .photo-container {
+    width: 100%;
+    aspect-ratio: 1085 / 1450;
+  }
+
+  .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  .message {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+
+  .icons {
+    font-size: 26px;
+    margin: 10px 0;
+  }
+
+  .quote {
+    font-size: 0.75em;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff4f8b, #ff7eb3);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 79, 139, 0.4);
+  }
+
+  .surprise {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #ff4f8b;
+    display: none;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+  <h1>🎂 Happy Birthday🎂</h1>
+
+  <div class="photo-container">
+    <img src="Rym.jpg" alt="Her Photo">
+  </div>
+
+  <div class="message">
+    Wishing you a day as beautiful as your smile and as warm as your heart.
+    Being with you is my greatest happiness, and I’m so grateful for every moment we share.
+    I love you more than words can say 💖
+  </div>
+
+  <div class="icons">🎉 🎈 🎁</div>
+
+  <div class="quote">
+    "Every moment with you is a gift I cherish forever."
+  </div>
+
+  <button onclick="showSurprise()">Click for a Surprise 🎁</button>
+
+  <div class="surprise" id="surprise">
+    You are my today, my tomorrow, and my forever 💕 I love you honey 💞💓🎀
+  </div>
+
+</div>
+
+<script>
+  function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
