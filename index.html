@@ -141,6 +141,9 @@
 </div>
 
 <script>
+ function showSurprise() {
+    document.getElementById("surprise").style.display = "block";
+  }
  function celebrate() {
       document.getElementById('surprise').classList.remove('hidden');
 
@@ -155,9 +158,7 @@
         confetti({ particleCount: 80, spread: 120, origin: { x: 0.8 } });
       }, 300);
     }
-  function showSurprise() {
-    document.getElementById("surprise").style.display = "block";
-  }
+ 
 </script>
 
 </body>
